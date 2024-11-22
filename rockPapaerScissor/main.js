@@ -1,4 +1,5 @@
 
+//creating an object
 let score =
 {
   won: 0,
