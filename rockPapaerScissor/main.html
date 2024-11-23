@@ -24,15 +24,20 @@
       <button onclick="   
         computerChoice=Choice();
 
-        showresult('Paper',computerChoice,result('Rock',computerChoice)) ;
+        showresult('Paper',computerChoice,result('Paper',computerChoice)) ;
       ">Paper</button>
 
       <button onclick="
         computerChoice=Choice();
        
- showresult('Scissor',computerChoice,result('Rock',computerChoice));">
+ showresult('Scissor',computerChoice,result('Scissor',computerChoice));">
         Scissor</button>
+<br>
+       
+ <button class="reset" onclick="localStorage.clear()
 
+
+ ;">Reset</button>
         <div class="msg"></div>
 
       <script src="main.js">
