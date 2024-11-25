@@ -16,21 +16,29 @@
       <button
         onclick="
         computerChoice=Choice();
-        alert(`${result('Rock',computerChoice)}
-        Your choice was Rock and computer choice was ${computerChoice}`) ;">
+       
+       showresult('Rock',computerChoice,result('Rock',computerChoice))
+       ;">
         Rock</button>
 
       <button onclick="   
         computerChoice=Choice();
-        alert(`${result('Paper',computerChoice)}
-        Your choice was Paper  computer choice was ${computerChoice}`) ;">Paper</button>
 
+        showresult('Paper',computerChoice,result('Paper',computerChoice)) ;
+      ">Paper</button>
 
-        <button onclick="
+      <button onclick="
         computerChoice=Choice();
-        alert(`${result('Scissor',computerChoice)}
-        Your choice was Scissor and computer choice was ${computerChoice}`) ;">
+       
+ showresult('Scissor',computerChoice,result('Scissor',computerChoice));">
         Scissor</button>
+<br>
+       
+ <button class="reset" onclick="localStorage.clear()
+
+
+ ;">Reset</button>
+        <div class="msg"></div>
 
       <script src="main.js">
 
