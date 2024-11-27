@@ -1,14 +1,13 @@
 
-//creating an
-let strscore= localStorage.getItem('Score');
+let strscore = localStorage.getItem('Score');
 let
 
-  score =strscore ? JSON.parse(strscore):
-{
-  won: 0,
-  lost: 0,
-  tie: 0,
-};//it sees weathere the locatl sta
+  score = strscore ? JSON.parse(strscore) :
+    {
+      won: 0,
+      lost: 0,
+      tie: 0,
+    };//it sees weathere the locatl sta
 
 
 
@@ -77,11 +76,11 @@ function result(userchoice, compchoice) {
   }
 }
 
-function showresult(userchoice, compchoice, result) { 
-     
+function showresult(userchoice, compchoice, result) {
+
   console.log(score);
-  document.querySelector('.msg').innerText = 
-  `Won: ${score.won} 
+  document.querySelector('.msg').innerText =
+    `Won: ${score.won} 
    Loss: ${score.lost} 
    Tie: ${score.tie}`;
 
@@ -90,7 +89,7 @@ function showresult(userchoice, compchoice, result) {
     
   YOU chosed ${userchoice} computer choosed ${compchoice}`);
   }, 50);
-  localStorage.setItem('Score',JSON.stringify(score));//it stores the score in the local storege
+  localStorage.setItem('Score', JSON.stringify(score));//it stores the score in the local storege
 
 
 
