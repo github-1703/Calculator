@@ -52,7 +52,7 @@ function updateColor() {
   }
   else {
 
-    //  button.classList.remove('js-even');
+     button.classList.remove('js-even');
     button.classList.add('js-odd');
   }
 
