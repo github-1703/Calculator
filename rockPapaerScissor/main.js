@@ -4,12 +4,15 @@ let
 
   score = strscore ? JSON.parse(strscore) :
     {
-      won: 0,
-      lost: 0,
-      tie: 0,
+      YOU: 0,
+      COMPUTER: 0,
+      TIE: 0,
     };//it sees weathere the locatl sta
 
-
+// function resetScore()
+// {
+//   YOU:
+// }
 
 function Choice() {
   let randomNum = Math.random() * 3;
@@ -25,31 +28,31 @@ function Choice() {
 function result(userchoice, compchoice) {
   if (userchoice === 'Paper') {
     if (compchoice === 'Rock') {
-      score.won++;
-      return 'won';
+      score.YOU++;
+      return 'WON';
     }
     else if (compchoice === 'Scissor') {
-      score.lost++
+      score.COMPUTER++
       return 'loosed';
 
     }
     else {
-      score.tie++;
+      score.TIE++;
       return 'tied';
     }
   }
   else if (userchoice === 'Rock') {
     if (compchoice === 'Rock') {
-      score.tie++;
+      score.TIE++;
       return 'tied';
     }
     else if (compchoice === 'Scissor') {
-      score.won++;
+      score.YOU++;
 
-      return 'won';
+      return 'WON';
     }
     else if (compchoice === 'Paper') {
-      score.lost++;
+      score.COMPUTER++;
       return 'loosed';
     }
 
@@ -59,14 +62,14 @@ function result(userchoice, compchoice) {
 
   else if (userchoice === 'Scissor') {
     if (compchoice === 'Scissor') {
-      score.tie++;
+      score.TIE++;
 
       return 'tied';
     }
     else if (compchoice === 'Paper') {
-      score.won++;
+      score.YOU++;
 
-      return 'won';
+      return 'WON';
     }
     else {
       score.loss++;
@@ -80,9 +83,11 @@ function showresult(userchoice, compchoice, result) {
 
   console.log(score);
   document.querySelector('.msg').innerText =
-    `Won: ${score.won} 
-   Loss: ${score.lost} 
-   Tie: ${score.tie}`;
+    `YOU: ${score.YOU} 
+
+    COMPUTER: ${score.COMPUTER} 
+
+   TIE: ${score.TIE}`;
 
   setTimeout(() => {
     alert(`You have "${result}".   
